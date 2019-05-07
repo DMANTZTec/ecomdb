@@ -16,14 +16,24 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Dumping data for table `coupon`
+-- Table structure for table `coupon`
 --
 
-LOCK TABLES `coupon` WRITE;
-/*!40000 ALTER TABLE `coupon` DISABLE KEYS */;
-INSERT INTO `coupon` VALUES (1476,'cfgh2','2019-05-13 17:47:13','string',NULL,0,'string','2019-05-03 17:47:13'),(1479,'asfddsfs','2019-05-13 18:17:45','string','2019-05-03 12:47:44.828000',0,'string','2019-05-03 18:17:45');
-/*!40000 ALTER TABLE `coupon` ENABLE KEYS */;
-UNLOCK TABLES;
+DROP TABLE IF EXISTS `coupon`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `coupon` (
+  `coupon_id` int(11) NOT NULL,
+  `coupon_code` varchar(255) DEFAULT NULL,
+  `ending_date` datetime DEFAULT NULL,
+  `last_update_by` varchar(255) DEFAULT NULL,
+  `last_update_time` timestamp(6) NULL DEFAULT NULL,
+  `market_partner_id` int(11) NOT NULL,
+  `percentage` varchar(255) DEFAULT NULL,
+  `starting_date` datetime DEFAULT NULL,
+  PRIMARY KEY (`coupon_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -34,4 +44,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-05-07 16:19:54
+-- Dump completed on 2019-05-07 16:54:04

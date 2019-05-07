@@ -16,13 +16,19 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Dumping data for table `orders_shipping_address`
+-- Table structure for table `orders_shipping_address`
 --
 
-LOCK TABLES `orders_shipping_address` WRITE;
-/*!40000 ALTER TABLE `orders_shipping_address` DISABLE KEYS */;
-/*!40000 ALTER TABLE `orders_shipping_address` ENABLE KEYS */;
-UNLOCK TABLES;
+DROP TABLE IF EXISTS `orders_shipping_address`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `orders_shipping_address` (
+  `order_order_id` int(11) NOT NULL,
+  `shipping_address_shipping_address_id` int(11) NOT NULL,
+  UNIQUE KEY `UK_2lg17m0i0sxt0hs60yysv0gfm` (`shipping_address_shipping_address_id`),
+  KEY `FKrabcrucrcy79jay3pynx7ratp` (`order_order_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -33,4 +39,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-05-07 16:19:54
+-- Dump completed on 2019-05-07 16:54:04

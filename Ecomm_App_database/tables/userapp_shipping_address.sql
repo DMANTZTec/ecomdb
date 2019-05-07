@@ -16,14 +16,30 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Dumping data for table `shipping_address`
+-- Table structure for table `shipping_address`
 --
 
-LOCK TABLES `shipping_address` WRITE;
-/*!40000 ALTER TABLE `shipping_address` DISABLE KEYS */;
-INSERT INTO `shipping_address` VALUES (896,'atthapur','rangareddy','104','rohit','3-1042','cgr international school','','jain','',3274843,500062,'yes','telengana'),(897,'ecil','hyderabad','102','mounika','2-3348','Dr Asraonagar',NULL,'swarna',NULL,9703392753,50076,NULL,'telengana');
-/*!40000 ALTER TABLE `shipping_address` ENABLE KEYS */;
-UNLOCK TABLES;
+DROP TABLE IF EXISTS `shipping_address`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `shipping_address` (
+  `shipping_address_id` int(11) NOT NULL,
+  `area` varchar(255) DEFAULT NULL,
+  `city` varchar(255) DEFAULT NULL,
+  `customer_id` varchar(255) DEFAULT NULL,
+  `first_name` varchar(255) DEFAULT NULL,
+  `flat_no` varchar(255) DEFAULT NULL,
+  `landmark` varchar(255) DEFAULT NULL,
+  `last_flg` varchar(255) DEFAULT NULL,
+  `last_name` varchar(255) DEFAULT NULL,
+  `middle_name` varchar(255) DEFAULT NULL,
+  `mobile_no` double NOT NULL,
+  `pincode` int(11) NOT NULL,
+  `primary_flg` varchar(255) DEFAULT NULL,
+  `state` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`shipping_address_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -34,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-05-07 16:19:55
+-- Dump completed on 2019-05-07 16:54:06

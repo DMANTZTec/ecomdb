@@ -16,14 +16,18 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Dumping data for table `order_coupon`
+-- Table structure for table `order_coupon`
 --
 
-LOCK TABLES `order_coupon` WRITE;
-/*!40000 ALTER TABLE `order_coupon` DISABLE KEYS */;
-INSERT INTO `order_coupon` VALUES (1460,1472),(1461,1472),(0,1476);
-/*!40000 ALTER TABLE `order_coupon` ENABLE KEYS */;
-UNLOCK TABLES;
+DROP TABLE IF EXISTS `order_coupon`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `order_coupon` (
+  `order_id` int(11) NOT NULL,
+  `coupon_id` int(11) NOT NULL,
+  PRIMARY KEY (`order_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -34,4 +38,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-05-07 16:19:55
+-- Dump completed on 2019-05-07 16:54:05
