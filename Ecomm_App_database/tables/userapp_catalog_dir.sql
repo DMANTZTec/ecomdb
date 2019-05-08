@@ -25,10 +25,10 @@ DROP TABLE IF EXISTS `catalog_dir`;
 CREATE TABLE `catalog_dir` (
   `catalog_id` int(11) NOT NULL,
   `parent_catalog_id` int(11) NOT NULL,
-  `level` int(11) NOT NULL,
-  `name` varchar(45) NOT NULL,
-  `description` varchar(45) NOT NULL,
-  `store_id` int(4) NOT NULL,
+  `catalog_level` int(11) NOT NULL,
+  `catalog_name` text NOT NULL,
+  `catalog_desc` text NOT NULL,
+  `store_id` int(11) NOT NULL,
   PRIMARY KEY (`catalog_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -42,4 +42,4 @@ CREATE TABLE `catalog_dir` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-03-27 11:21:53
+-- Dump completed on 2019-05-08 11:52:02
