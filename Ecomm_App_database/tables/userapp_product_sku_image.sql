@@ -16,21 +16,20 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `product_sku_option`
+-- Table structure for table `product_sku_image`
 --
 
-DROP TABLE IF EXISTS `product_sku_option`;
+DROP TABLE IF EXISTS `product_sku_image`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
-CREATE TABLE `product_sku_option` (
-  `product_sku_options_id` int(11) NOT NULL,
-  `product_sku_id` int(11) NOT NULL,
-  `option_id` int(11) NOT NULL,
-  PRIMARY KEY (`product_sku_options_id`),
-  KEY `option_id_idx` (`option_id`),
+CREATE TABLE `product_sku_image` (
+  `product_sku_image_id` int(4) NOT NULL,
+  `product_sku_id` int(4) NOT NULL,
+  `img_url` varchar(150) NOT NULL,
+  `image` longblob NOT NULL,
+  PRIMARY KEY (`product_sku_image_id`),
   KEY `product_sku_id_idx` (`product_sku_id`),
-  CONSTRAINT `option_id` FOREIGN KEY (`option_id`) REFERENCES `options` (`option_id`),
-  CONSTRAINT `products_sku_id` FOREIGN KEY (`product_sku_id`) REFERENCES `product_sku` (`product_sku_id`)
+  CONSTRAINT `product_sku_id` FOREIGN KEY (`product_sku_id`) REFERENCES `product_sku` (`product_sku_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
